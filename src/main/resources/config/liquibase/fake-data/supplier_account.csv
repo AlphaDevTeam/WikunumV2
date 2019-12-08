@@ -1,0 +1,11 @@
+id;transaction_date;transaction_description;transaction_amount_dr;transaction_amount_cr;transaction_balance;location_id;transaction_type_id;supplier_id
+1;2019-12-08;Pizza redundant deposit;49819;16167;55536;1;1;1
+2;2019-12-08;deposit workforce Virgin Islands, British;49327;65032;8152;2;2;2
+3;2019-12-08;Algerian Dinar Practical Steel Mouse;25768;84045;46262;3;3;3
+4;2019-12-08;Assurance mindshare navigating;62876;34593;73535;4;4;4
+5;2019-12-08;Analyst Awesome Fresh Hat New Jersey;43861;2939;72525;5;5;5
+6;2019-12-08;Auto Loan Account Personal Loan Account;79295;42172;65500;6;6;6
+7;2019-12-08;Iowa National grey;62296;46581;63156;7;7;7
+8;2019-12-07;Customer-focused synthesize iterate;60185;17968;63254;8;8;8
+9;2019-12-08;Analyst Shirt;85438;6913;49227;9;9;9
+10;2019-12-08;Refined;40502;44530;59291;10;10;10

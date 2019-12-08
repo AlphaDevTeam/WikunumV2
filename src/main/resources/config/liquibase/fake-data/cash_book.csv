@@ -1,0 +1,11 @@
+id;transaction_date;transaction_description;transaction_amount_dr;transaction_amount_cr;transaction_balance;location_id;transaction_type_id
+1;2019-12-07;unleash grid-enabled Specialist;40933;32074;89409;1;1
+2;2019-12-07;override;20035;3113;86812;2;2
+3;2019-12-07;efficient RSS Neck;96819;15924;18552;3;3
+4;2019-12-08;Licensed Cheese Summit;53035;76102;1786;4;4
+5;2019-12-07;Plastic Automotive Principal;61665;18545;79653;5;5
+6;2019-12-07;Music Savings Account;60730;68556;24753;6;6
+7;2019-12-08;teal Avon;6420;65151;58197;7;7
+8;2019-12-08;South Carolina;43324;31036;98435;8;8
+9;2019-12-08;Health;7244;68045;39249;9;9
+10;2019-12-08;Orchestrator port;65698;69498;75705;10;10

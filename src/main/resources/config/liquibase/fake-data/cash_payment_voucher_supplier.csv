@@ -1,0 +1,11 @@
+id;transaction_date;transaction_description;transaction_amount_dr;transaction_amount_cr;location_id;transaction_type_id;supplier_id
+1;2019-12-08;EXE optical deposit;85058;15734;1;1;1
+2;2019-12-07;array;83701;23869;2;2;2
+3;2019-12-07;Brunei Dollar Credit Card Account override;15860;88163;3;3;3
+4;2019-12-07;RSS Outdoors backing up;12886;81994;4;4;4
+5;2019-12-08;reboot;16075;112;5;5;5
+6;2019-12-07;synthesizing Bedfordshire;638;19313;6;6;6
+7;2019-12-08;Money Market Account;98118;55984;7;7;7
+8;2019-12-07;exuding;63400;907;8;8;8
+9;2019-12-07;back-end Gorgeous back up;54126;43224;9;9;9
+10;2019-12-07;24/365 deposit Mobility;10250;78880;10;10;10

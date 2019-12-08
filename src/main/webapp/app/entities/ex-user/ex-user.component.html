@@ -1,0 +1,71 @@
+<div>
+    <h2 id="page-heading">
+        <span>Ex Users</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-ex-user" [routerLink]="['/ex-user/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span >
+            Create a new Ex User
+            </span>
+        </button>
+    </h2>
+    <jhi-alert-error></jhi-alert-error>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="alert alert-warning" *ngIf="exUsers?.length === 0">
+        <span>No exUsers found</span>
+    </div>
+    <div class="table-responsive" *ngIf="exUsers?.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="reset.bind(this)">
+            <th scope="col"  jhiSortBy="id"><span>ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="userKey"><span>User Key</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="relatedUser.id"><span>Related User</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="company.id"><span>Company</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="history.id"><span>History</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody infinite-scroll (scrolled)="loadPage(page + 1)" [infiniteScrollDisabled]="page >= links['last']" [infiniteScrollDistance]="0">
+            <tr *ngFor="let exUser of exUsers ;trackBy: trackId">
+                <td><a [routerLink]="['/ex-user', exUser.id, 'view' ]">{{exUser.id}}</a></td>
+                <td>{{exUser.userKey}}</td>
+                <td>
+                    {{exUser.relatedUser?.id}}
+                </td>
+                <td>
+                    <div *ngIf="exUser.company">
+                        <a [routerLink]="['/company', exUser.company?.id, 'view' ]" >{{exUser.company?.id}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="exUser.history">
+                        <a [routerLink]="['/document-history', exUser.history?.id, 'view' ]" >{{exUser.history?.id}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/ex-user', exUser.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/ex-user', exUser.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit" (click)="delete(exUser)"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

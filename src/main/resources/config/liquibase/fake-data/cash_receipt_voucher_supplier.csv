@@ -1,0 +1,11 @@
+id;transaction_date;transaction_description;transaction_amount_dr;transaction_amount_cr;location_id;transaction_type_id;supplier_id
+1;2019-12-07;Baht;6783;94729;1;1;1
+2;2019-12-08;application;6735;70857;2;2;2
+3;2019-12-07;proactive Checking Account;4574;85241;3;3;3
+4;2019-12-07;Technician Architect calculate;13008;59439;4;4;4
+5;2019-12-07;Movies Sports;32361;37183;5;5;5
+6;2019-12-07;compress UAE Dirham Dam;27362;46853;6;6;6
+7;2019-12-07;partnerships Terrace Hat;79480;82592;7;7;7
+8;2019-12-07;fuchsia;8238;77282;8;8;8
+9;2019-12-07;deposit;27325;86805;9;9;9
+10;2019-12-07;Chair mindshare Interactions;41972;85736;10;10;10
