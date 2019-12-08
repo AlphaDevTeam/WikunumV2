@@ -1,0 +1,39 @@
+{
+    "name": "StorageBin",
+    "fields": [
+        {
+            "fieldName": "binNumber",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "binDescription",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "documentHistory",
+            "otherEntityRelationshipName": "storageBin",
+            "relationshipName": "history",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191208170719",
+    "javadoc": "StorageBin Entity.\\n@author Mihindu Karunarathne.",
+    "entityTableName": "storage_bin",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

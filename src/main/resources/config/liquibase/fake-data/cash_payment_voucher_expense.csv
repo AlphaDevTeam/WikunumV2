@@ -1,0 +1,11 @@
+id;transaction_date;transaction_description;transaction_amount;location_id;transaction_type_id;expense_id
+1;2019-12-08;EXE optical deposit;85058;1;1;1
+2;2019-12-08;Fish next-generation Quality-focused;93009;2;2;2
+3;2019-12-08;Credit Card Account;75271;3;3;3
+4;2019-12-08;SCSI;96131;4;4;4
+5;2019-12-07;Outdoors backing up;12886;5;5;5
+6;2019-12-07;Reduced Corporate;112;6;6;6
+7;2019-12-07;synthesizing Bedfordshire;638;7;7;7
+8;2019-12-08;Generic;32643;8;8;8
+9;2019-12-07;deposit exuding;63400;9;9;9
+10;2019-12-08;synthesizing Wooden;28334;10;10;10

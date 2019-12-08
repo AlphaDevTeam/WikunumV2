@@ -1,0 +1,11 @@
+id;transaction_date;transaction_description;transaction_amount_dr;transaction_amount_cr;transaction_balance;location_id;transaction_type_id;expense_id
+1;2019-12-08;Group Avon neural;55022;37350;4341;1;1;1
+2;2019-12-08;Frozen Kids;63798;81918;51517;2;2;2
+3;2019-12-07;Secured olive;61098;17477;41102;3;3;3
+4;2019-12-08;Human navigate Idaho;25564;78052;30206;4;4;4
+5;2019-12-08;transmitting bandwidth Trinidad and Tobago Dollar;9553;76665;62385;5;5;5
+6;2019-12-08;interfaces Mouse;23523;73687;86925;6;6;6
+7;2019-12-07;sky blue Intelligent;2363;31227;64197;7;7;7
+8;2019-12-08;sky blue deposit;25688;39090;63201;8;8;8
+9;2019-12-08;Avon;98778;27454;13643;9;9;9
+10;2019-12-08;Kenyan Shilling technologies Roads;72451;69243;1582;10;10;10

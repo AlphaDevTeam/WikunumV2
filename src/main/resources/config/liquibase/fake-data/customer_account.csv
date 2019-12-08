@@ -1,0 +1,11 @@
+id;transaction_date;transaction_description;transaction_amount_dr;transaction_amount_cr;transaction_balance;location_id;transaction_type_id;customer_id
+1;2019-12-07;deposit maroon;68022;22056;7219;1;1;1
+2;2019-12-08;white;84045;46262;17419;2;2;2
+3;2019-12-07;interface program e-commerce;34593;73535;37103;3;3;3
+4;2019-12-07;Avon Syrian Arab Republic Borders;58805;43861;2939;4;4;4
+5;2019-12-07;Borders HDD;90070;79295;42172;5;5;5
+6;2019-12-08;Planner;28385;91236;35915;6;6;6
+7;2019-12-08;Investment Account invoice;73311;23579;13156;7;7;7
+8;2019-12-07;iterate Savings Account deposit;37284;97139;51261;8;8;8
+9;2019-12-08;SDD Berkshire;24723;9739;87074;9;9;9
+10;2019-12-08;Home Loan Account Louisiana;66262;59295;9526;10;10;10
