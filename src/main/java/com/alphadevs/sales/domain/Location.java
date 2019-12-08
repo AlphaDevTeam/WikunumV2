@@ -44,7 +44,7 @@ public class Location implements Serializable {
     private Company company;
 
     @ManyToOne
-    @JsonIgnoreProperties("locations")
+    @JsonIgnoreProperties(value = "locations",allowSetters = true)
     private DocumentHistory history;
 
     @ManyToMany(mappedBy = "locations")

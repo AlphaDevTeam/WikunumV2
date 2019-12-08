@@ -4,6 +4,7 @@ import com.alphadevs.sales.WikunumV2App;
 import com.alphadevs.sales.domain.SupplierAccountBalance;
 import com.alphadevs.sales.domain.Location;
 import com.alphadevs.sales.domain.TransactionType;
+import com.alphadevs.sales.domain.Supplier;
 import com.alphadevs.sales.repository.SupplierAccountBalanceRepository;
 import com.alphadevs.sales.service.SupplierAccountBalanceService;
 import com.alphadevs.sales.web.rest.errors.ExceptionTranslator;
@@ -389,6 +390,26 @@ public class SupplierAccountBalanceResourceIT {
 
         // Get all the supplierAccountBalanceList where transactionType equals to transactionTypeId + 1
         defaultSupplierAccountBalanceShouldNotBeFound("transactionTypeId.equals=" + (transactionTypeId + 1));
+    }
+
+
+    @Test
+    @Transactional
+    public void getAllSupplierAccountBalancesBySupplierIsEqualToSomething() throws Exception {
+        // Initialize the database
+        supplierAccountBalanceRepository.saveAndFlush(supplierAccountBalance);
+        Supplier supplier = SupplierResourceIT.createEntity(em);
+        em.persist(supplier);
+        em.flush();
+        supplierAccountBalance.setSupplier(supplier);
+        supplierAccountBalanceRepository.saveAndFlush(supplierAccountBalance);
+        Long supplierId = supplier.getId();
+
+        // Get all the supplierAccountBalanceList where supplier equals to supplierId
+        defaultSupplierAccountBalanceShouldBeFound("supplierId.equals=" + supplierId);
+
+        // Get all the supplierAccountBalanceList where supplier equals to supplierId + 1
+        defaultSupplierAccountBalanceShouldNotBeFound("supplierId.equals=" + (supplierId + 1));
     }
 
     /**

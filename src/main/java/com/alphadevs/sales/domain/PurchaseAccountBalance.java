@@ -88,6 +88,10 @@ public class PurchaseAccountBalance implements Serializable {
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
+    public void addBalance(BigDecimal addAmount) {
+        this.balance.add(addAmount);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -111,4 +115,6 @@ public class PurchaseAccountBalance implements Serializable {
             ", balance=" + getBalance() +
             "}";
     }
+
+
 }

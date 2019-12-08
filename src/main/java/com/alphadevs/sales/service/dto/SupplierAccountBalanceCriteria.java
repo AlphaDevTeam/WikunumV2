@@ -33,6 +33,8 @@ public class SupplierAccountBalanceCriteria implements Serializable, Criteria {
 
     private LongFilter transactionTypeId;
 
+    private LongFilter supplierId;
+
     public SupplierAccountBalanceCriteria(){
     }
 
@@ -41,6 +43,7 @@ public class SupplierAccountBalanceCriteria implements Serializable, Criteria {
         this.balance = other.balance == null ? null : other.balance.copy();
         this.locationId = other.locationId == null ? null : other.locationId.copy();
         this.transactionTypeId = other.transactionTypeId == null ? null : other.transactionTypeId.copy();
+        this.supplierId = other.supplierId == null ? null : other.supplierId.copy();
     }
 
     @Override
@@ -80,6 +83,14 @@ public class SupplierAccountBalanceCriteria implements Serializable, Criteria {
         this.transactionTypeId = transactionTypeId;
     }
 
+    public LongFilter getSupplierId() {
+        return supplierId;
+    }
+
+    public void setSupplierId(LongFilter supplierId) {
+        this.supplierId = supplierId;
+    }
+
 
     @Override
     public boolean equals(Object o) {
@@ -94,7 +105,8 @@ public class SupplierAccountBalanceCriteria implements Serializable, Criteria {
             Objects.equals(id, that.id) &&
             Objects.equals(balance, that.balance) &&
             Objects.equals(locationId, that.locationId) &&
-            Objects.equals(transactionTypeId, that.transactionTypeId);
+            Objects.equals(transactionTypeId, that.transactionTypeId) &&
+            Objects.equals(supplierId, that.supplierId);
     }
 
     @Override
@@ -103,7 +115,8 @@ public class SupplierAccountBalanceCriteria implements Serializable, Criteria {
         id,
         balance,
         locationId,
-        transactionTypeId
+        transactionTypeId,
+        supplierId
         );
     }
 
@@ -114,6 +127,7 @@ public class SupplierAccountBalanceCriteria implements Serializable, Criteria {
                 (balance != null ? "balance=" + balance + ", " : "") +
                 (locationId != null ? "locationId=" + locationId + ", " : "") +
                 (transactionTypeId != null ? "transactionTypeId=" + transactionTypeId + ", " : "") +
+                (supplierId != null ? "supplierId=" + supplierId + ", " : "") +
             "}";
     }
 

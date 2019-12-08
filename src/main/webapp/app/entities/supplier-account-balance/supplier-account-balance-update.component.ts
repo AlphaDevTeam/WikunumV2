@@ -12,6 +12,8 @@ import { ILocation } from 'app/shared/model/location.model';
 import { LocationService } from 'app/entities/location/location.service';
 import { ITransactionType } from 'app/shared/model/transaction-type.model';
 import { TransactionTypeService } from 'app/entities/transaction-type/transaction-type.service';
+import { ISupplier } from 'app/shared/model/supplier.model';
+import { SupplierService } from 'app/entities/supplier/supplier.service';
 
 @Component({
   selector: 'jhi-supplier-account-balance-update',
@@ -24,11 +26,14 @@ export class SupplierAccountBalanceUpdateComponent implements OnInit {
 
   transactiontypes: ITransactionType[];
 
+  suppliers: ISupplier[];
+
   editForm = this.fb.group({
     id: [],
     balance: [null, [Validators.required]],
     location: [null, Validators.required],
-    transactionType: [null, Validators.required]
+    transactionType: [null, Validators.required],
+    supplier: []
   });
 
   constructor(
@@ -36,6 +41,7 @@ export class SupplierAccountBalanceUpdateComponent implements OnInit {
     protected supplierAccountBalanceService: SupplierAccountBalanceService,
     protected locationService: LocationService,
     protected transactionTypeService: TransactionTypeService,
+    protected supplierService: SupplierService,
     protected activatedRoute: ActivatedRoute,
     private fb: FormBuilder
   ) {}
@@ -54,6 +60,9 @@ export class SupplierAccountBalanceUpdateComponent implements OnInit {
         (res: HttpResponse<ITransactionType[]>) => (this.transactiontypes = res.body),
         (res: HttpErrorResponse) => this.onError(res.message)
       );
+    this.supplierService
+      .query()
+      .subscribe((res: HttpResponse<ISupplier[]>) => (this.suppliers = res.body), (res: HttpErrorResponse) => this.onError(res.message));
   }
 
   updateForm(supplierAccountBalance: ISupplierAccountBalance) {
@@ -61,7 +70,8 @@ export class SupplierAccountBalanceUpdateComponent implements OnInit {
       id: supplierAccountBalance.id,
       balance: supplierAccountBalance.balance,
       location: supplierAccountBalance.location,
-      transactionType: supplierAccountBalance.transactionType
+      transactionType: supplierAccountBalance.transactionType,
+      supplier: supplierAccountBalance.supplier
     });
   }
 
@@ -85,7 +95,8 @@ export class SupplierAccountBalanceUpdateComponent implements OnInit {
       id: this.editForm.get(['id']).value,
       balance: this.editForm.get(['balance']).value,
       location: this.editForm.get(['location']).value,
-      transactionType: this.editForm.get(['transactionType']).value
+      transactionType: this.editForm.get(['transactionType']).value,
+      supplier: this.editForm.get(['supplier']).value
     };
   }
 
@@ -110,6 +121,10 @@ export class SupplierAccountBalanceUpdateComponent implements OnInit {
   }
 
   trackTransactionTypeById(index: number, item: ITransactionType) {
+    return item.id;
+  }
+
+  trackSupplierById(index: number, item: ISupplier) {
     return item.id;
   }
 }

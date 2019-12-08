@@ -39,6 +39,10 @@ public class SupplierAccountBalance implements Serializable {
     @JsonIgnoreProperties("supplierAccountBalances")
     private TransactionType transactionType;
 
+    @ManyToOne
+    @JsonIgnoreProperties("supplierAccountBalances")
+    private Supplier supplier;
+
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
         return id;
@@ -86,7 +90,24 @@ public class SupplierAccountBalance implements Serializable {
     public void setTransactionType(TransactionType transactionType) {
         this.transactionType = transactionType;
     }
+
+    public Supplier getSupplier() {
+        return supplier;
+    }
+
+    public SupplierAccountBalance supplier(Supplier supplier) {
+        this.supplier = supplier;
+        return this;
+    }
+
+    public void setSupplier(Supplier supplier) {
+        this.supplier = supplier;
+    }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
+
+    public void addBalance(BigDecimal addAmount) {
+        this.balance.add(addAmount);
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -111,4 +132,6 @@ public class SupplierAccountBalance implements Serializable {
             ", balance=" + getBalance() +
             "}";
     }
+
+
 }

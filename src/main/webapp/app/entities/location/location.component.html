@@ -35,7 +35,8 @@
                 <td>{{location.isActive}}</td>
                 <td>
                     <div *ngIf="location.company">
-                        <a [routerLink]="['/company', location.company?.id, 'view' ]" > [{{location.company?.companyCode}}] {{location.company?.companyName}}</a>
+                        <a *jhiHasAnyAuthority="'ROLE_ADMIN'" [routerLink]="['/company', location.company?.id, 'view' ]" >[{{location.company?.companyCode}}] {{location.company?.companyName}}</a>
+                        <a *jhiHasAnyAuthority="'ROLE_USER'" [routerLink]="['/company', location.company?.id, 'view' ]" >{{location.company?.companyCode}}</a>
                     </div>
                 </td>
                 <td>

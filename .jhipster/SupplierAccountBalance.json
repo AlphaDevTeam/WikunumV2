@@ -25,6 +25,13 @@
             "relationshipValidateRules": "required",
             "relationshipName": "transactionType",
             "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "supplier",
+            "otherEntityName": "supplier",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id",
+            "otherEntityRelationshipName": "supplierAccountBalance"
         }
     ],
     "changelogDate": "20191208181156",
@@ -37,5 +44,7 @@
     "fluentMethods": true,
     "readOnly": false,
     "clientRootFolder": "",
-    "applications": "*"
+    "applications": "*",
+    "searchEngine": false,
+    "databaseType": "sql"
 }

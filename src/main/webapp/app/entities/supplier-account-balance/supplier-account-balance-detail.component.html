@@ -21,6 +21,12 @@
                         <a [routerLink]="['/transaction-type', supplierAccountBalance.transactionType?.id, 'view']">{{supplierAccountBalance.transactionType?.id}}</a>
                     </div>
                 </dd>
+                <dt><span>Supplier</span></dt>
+                <dd>
+                    <div *ngIf="supplierAccountBalance.supplier">
+                        <a [routerLink]="['/supplier', supplierAccountBalance.supplier?.id, 'view']">{{supplierAccountBalance.supplier?.id}}</a>
+                    </div>
+                </dd>
             </dl>
 
             <button type="submit"

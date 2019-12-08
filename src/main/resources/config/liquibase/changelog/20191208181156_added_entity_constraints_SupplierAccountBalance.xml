@@ -20,5 +20,11 @@
                                  referencedColumnNames="id"
                                  referencedTableName="transaction_type"/>
 
+        <addForeignKeyConstraint baseColumnNames="supplier_id"
+                                 baseTableName="supplier_account_balance"
+                                 constraintName="fk_supplier_account_balance_supplier_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="supplier"/>
+
     </changeSet>
 </databaseChangeLog>

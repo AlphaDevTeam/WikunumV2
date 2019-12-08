@@ -3,6 +3,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import io.swagger.annotations.ApiModel;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
+import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 import javax.validation.constraints.*;
@@ -36,6 +37,7 @@ public class DocumentHistory implements Serializable {
     @ManyToOne(optional = false)
     @NotNull
     @JsonIgnoreProperties("documentHistories")
+    @Cascade(org.hibernate.annotations.CascadeType.ALL)
     private DocumentType type;
 
     @ManyToOne(optional = false)
