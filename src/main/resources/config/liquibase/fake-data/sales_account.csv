@@ -1,0 +1,11 @@
+id;transaction_date;transaction_description;transaction_amount_dr;transaction_amount_cr;transaction_balance;location_id;transaction_type_id
+1;2019-12-07;Berkshire Tugrik;13965;12574;2997;1;1
+2;2019-12-08;Metal;93981;20185;73289;2;2
+3;2019-12-07;Officer;9390;73082;67260;3;3
+4;2019-12-08;Synergistic Officer;25530;69262;66163;4;4
+5;2019-12-07;Identity Lek Bedfordshire;61784;83087;86890;5;5
+6;2019-12-07;back up Frozen;79551;68952;91867;6;6
+7;2019-12-07;lavender invoice;39386;66697;65123;7;7
+8;2019-12-07;world-class;15928;99941;60495;8;8
+9;2019-12-08;Facilitator;40690;99333;87075;9;9
+10;2019-12-07;Awesome optimal Refined;65051;40414;76519;10;10

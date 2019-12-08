@@ -1,0 +1,39 @@
+{
+    "name": "UOM",
+    "fields": [
+        {
+            "fieldName": "uomCode",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "uomDescription",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "documentHistory",
+            "otherEntityRelationshipName": "uOM",
+            "relationshipName": "history",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191208105759",
+    "javadoc": "UOM Entity.\\n@author Mihindu Karunarathne.",
+    "entityTableName": "uom",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

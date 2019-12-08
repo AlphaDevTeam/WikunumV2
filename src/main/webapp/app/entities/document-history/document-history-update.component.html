@@ -1,0 +1,83 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-document-history-heading">Create or edit a Document History</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!editForm.get('id').value">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_historyDescription">History Description</label>
+                    <input type="text" class="form-control" name="historyDescription" id="field_historyDescription"
+                           formControlName="historyDescription"/>
+                    <div *ngIf="editForm.get('historyDescription').invalid && (editForm.get('historyDescription').dirty || editForm.get('historyDescription').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('historyDescription').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_historyDate">History Date</label>
+                    <div class="input-group">
+                        <input id="field_historyDate" type="text" class="form-control" name="historyDate" ngbDatepicker  #historyDateDp="ngbDatepicker" formControlName="historyDate"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="historyDateDp.toggle()"><fa-icon [icon]="'calendar-alt'"></fa-icon></button>
+                        </span>
+                    </div>
+                    <div *ngIf="editForm.get('historyDate').invalid && (editForm.get('historyDate').dirty || editForm.get('historyDate').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('historyDate').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_type">Type</label>
+                    <select class="form-control" id="field_type" name="type" formControlName="type">
+                        <option *ngIf="!editForm.get('type').value" [ngValue]="null" selected></option>
+                        <option [ngValue]="documentTypeOption.id === editForm.get('type').value?.id ? editForm.get('type').value : documentTypeOption" *ngFor="let documentTypeOption of documenttypes; trackBy: trackDocumentTypeById">{{documentTypeOption.id}}</option>
+                    </select>
+                </div>
+                <div *ngIf="editForm.get('type').invalid && (editForm.get('type').dirty || editForm.get('type').touched)">
+                    <small class="form-text text-danger"
+                           *ngIf="editForm.get('type').errors.required">
+                        This field is required.
+                    </small>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_user">User</label>
+                    <select class="form-control" id="field_user" name="user" formControlName="user">
+                        <option *ngIf="!editForm.get('user').value" [ngValue]="null" selected></option>
+                        <option [ngValue]="exUserOption.id === editForm.get('user').value?.id ? editForm.get('user').value : exUserOption" *ngFor="let exUserOption of exusers; trackBy: trackExUserById">{{exUserOption.id}}</option>
+                    </select>
+                </div>
+                <div *ngIf="editForm.get('user').invalid && (editForm.get('user').dirty || editForm.get('user').touched)">
+                    <small class="form-text text-danger"
+                           *ngIf="editForm.get('user').errors.required">
+                        This field is required.
+                    </small>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_changeLog">Change Log</label>
+                    <select class="form-control" id="field_changeLog" name="changeLog" formControlName="changeLog">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="changeLogOption.id === editForm.get('changeLog').value?.id ? editForm.get('changeLog').value : changeLogOption" *ngFor="let changeLogOption of changelogs; trackBy: trackChangeLogById">{{changeLogOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
