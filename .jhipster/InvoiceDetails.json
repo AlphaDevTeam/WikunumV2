@@ -1,0 +1,37 @@
+{
+    "name": "InvoiceDetails",
+    "fields": [
+        {
+            "fieldName": "invQty",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "revisedItemSalesPrice",
+            "fieldType": "BigDecimal"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "invoice",
+            "otherEntityRelationshipName": "details",
+            "relationshipValidateRules": "required",
+            "relationshipName": "inv",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191208170718",
+    "javadoc": "Invoice Details Entity.\\n@author Mihindu Karunarathne.",
+    "entityTableName": "invoice_details",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

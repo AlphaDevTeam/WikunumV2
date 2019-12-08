@@ -1,0 +1,11 @@
+id;transaction_date;transaction_description;transaction_amount;location_id;transaction_type_id;customer_id
+1;2019-12-07;bypass e-services;42135;1;1;1
+2;2019-12-08;program Music Inlet;29700;2;2;2
+3;2019-12-08;paradigm Persevering Gorgeous Steel Salad;98772;3;3;3
+4;2019-12-08;Fantastic whiteboard;12443;4;4;4
+5;2019-12-08;Data open-source Generic;41758;5;5;5
+6;2019-12-07;XSS Investment Account Investor;98918;6;6;6
+7;2019-12-08;Associate Intuitive Creative;64964;7;7;7
+8;2019-12-08;connecting Concrete;4694;8;8;8
+9;2019-12-08;green lavender;77958;9;9;9
+10;2019-12-07;primary invoice;21632;10;10;10

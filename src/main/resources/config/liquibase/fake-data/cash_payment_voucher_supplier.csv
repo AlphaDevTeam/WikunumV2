@@ -1,0 +1,11 @@
+id;transaction_date;transaction_description;transaction_amount;location_id;transaction_type_id;supplier_id
+1;2019-12-08;Terrace;16362;1;1;1
+2;2019-12-08;calculating conglomeration bypassing;77282;2;2;2
+3;2019-12-08;deposit;27325;3;3;3
+4;2019-12-07;Liaison Grocery capacitor;90952;4;4;4
+5;2019-12-08;invoice unleash grid-enabled;98397;5;5;5
+6;2019-12-08;success program;74583;6;6;6
+7;2019-12-08;Outdoors;65166;7;7;7
+8;2019-12-07;Utah Mall;54323;8;8;8
+9;2019-12-07;teal;86862;9;9;9
+10;2019-12-08;Cheese Summit Saint Martin;1786;10;10;10

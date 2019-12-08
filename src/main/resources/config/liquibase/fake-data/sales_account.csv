@@ -1,0 +1,11 @@
+id;transaction_date;transaction_description;transaction_amount_dr;transaction_amount_cr;transaction_balance;location_id;transaction_type_id
+1;2019-12-08;deploy Advanced;7319;58706;60344;1;1
+2;2019-12-08;payment connect Berkshire;54236;86333;95147;2;2
+3;2019-12-08;Unions Jewelery leading-edge;38019;14899;39882;3;3
+4;2019-12-08;Operative Place;39436;76488;54941;4;4
+5;2019-12-07;monitor Operations Sports;19577;43086;756;5;5
+6;2019-12-07;Unbranded Frozen Bike invoice;38007;6026;19715;6;6
+7;2019-12-07;mission-critical Rustic;48587;61735;25677;7;7
+8;2019-12-08;Quetzal;92960;80302;53226;8;8
+9;2019-12-08;archive Credit Card Account;71615;39990;27262;9;9
+10;2019-12-07;bypassing Christmas Island;12322;68111;85941;10;10

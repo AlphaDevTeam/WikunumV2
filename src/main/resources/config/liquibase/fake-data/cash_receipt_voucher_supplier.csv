@@ -1,0 +1,11 @@
+id;transaction_date;transaction_description;transaction_amount;location_id;transaction_type_id;supplier_id
+1;2019-12-08;Plastic Automotive Principal;61665;1;1;1
+2;2019-12-08;Manors Music Savings Account;60730;2;2;2
+3;2019-12-08;architectures;20052;3;3;3
+4;2019-12-08;Car payment;32592;4;4;4
+5;2019-12-08;redundant website;45522;5;5;5
+6;2019-12-08;Circles;68045;6;6;6
+7;2019-12-08;Walks Credit Card Account;29166;7;7;7
+8;2019-12-08;program Accounts Lead;72428;8;8;8
+9;2019-12-08;Rustic Configurable Planner;14249;9;9;9
+10;2019-12-08;Borders magenta;34601;10;10;10

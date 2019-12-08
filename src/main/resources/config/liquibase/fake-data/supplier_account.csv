@@ -1,0 +1,11 @@
+id;transaction_date;transaction_description;transaction_amount_dr;transaction_amount_cr;transaction_balance;location_id;transaction_type_id;supplier_id
+1;2019-12-08;quantify Cotton;96982;23702;45378;1;1;1
+2;2019-12-08;SDD;44202;16975;33088;2;2;2
+3;2019-12-08;open-source hacking;43088;44943;24871;3;3;3
+4;2019-12-08;Assurance De-engineered;35925;16761;37935;4;4;4
+5;2019-12-08;array payment;47463;78179;84417;5;5;5
+6;2019-12-08;Passage SCSI Hawaii;53990;11191;3418;6;6;6
+7;2019-12-08;Rustic Granite Bike Program Generic Wooden Bike;45219;18001;93387;7;7;7
+8;2019-12-08;Sleek;58467;4157;68820;8;8;8
+9;2019-12-08;Architect Developer;493;1737;95181;9;9;9
+10;2019-12-08;Facilitator Minnesota;25422;51559;52173;10;10;10

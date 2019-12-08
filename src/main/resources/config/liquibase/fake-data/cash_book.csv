@@ -1,0 +1,11 @@
+id;transaction_date;transaction_description;transaction_amount_dr;transaction_amount_cr;transaction_balance;location_id;transaction_type_id
+1;2019-12-08;Automotive approach Borders;8786;88253;35062;1;1
+2;2019-12-08;bypassing;35780;39692;32209;2;2
+3;2019-12-08;Hawaii Solomon Islands Dollar neural;20015;4118;16748;3;3
+4;2019-12-08;Web;12421;70647;89622;4;4
+5;2019-12-08;Communications Generic Granite Gloves;70906;93520;87096;5;5
+6;2019-12-07;Auto Loan Account cross-platform Auto Loan Account;48439;8011;66082;6;6
+7;2019-12-07;Montserrat synthesizing;45231;48090;64357;7;7
+8;2019-12-08;Fish markets;72482;6035;59327;8;8
+9;2019-12-08;Shoes HDD;21921;32901;97586;9;9
+10;2019-12-08;override PNG;43365;65870;4366;10;10
