@@ -59,6 +59,10 @@ public class ExUser implements Serializable {
     private Set<UserGroup> userGroups = new HashSet<>();
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
+
+
+    public ExUser() { }
+
     public Long getId() {
         return id;
     }

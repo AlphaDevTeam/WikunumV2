@@ -1,12 +1,15 @@
 package com.alphadevs.sales.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.criteria.JoinType;
 
+import com.alphadevs.sales.security.SecurityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
@@ -19,6 +22,9 @@ import com.alphadevs.sales.domain.*; // for static metamodels
 import com.alphadevs.sales.repository.LocationRepository;
 import com.alphadevs.sales.service.dto.LocationCriteria;
 
+import static com.alphadevs.sales.security.AuthoritiesConstants.ADMIN;
+import static com.alphadevs.sales.security.AuthoritiesConstants.USER;
+
 /**
  * Service for executing complex queries for {@link Location} entities in the database.
  * The main input is a {@link LocationCriteria} which gets converted to {@link Specification},
@@ -30,10 +36,11 @@ import com.alphadevs.sales.service.dto.LocationCriteria;
 public class LocationQueryService extends QueryService<Location> {
 
     private final Logger log = LoggerFactory.getLogger(LocationQueryService.class);
-
+    private final UserService userService;
     private final LocationRepository locationRepository;
 
-    public LocationQueryService(LocationRepository locationRepository) {
+    public LocationQueryService(UserService userService, LocationRepository locationRepository) {
+        this.userService = userService;
         this.locationRepository = locationRepository;
     }
 
@@ -59,7 +66,21 @@ public class LocationQueryService extends QueryService<Location> {
     public Page<Location> findByCriteria(LocationCriteria criteria, Pageable page) {
         log.debug("find by criteria : {}, page: {}", criteria, page);
         final Specification<Location> specification = createSpecification(criteria);
-        return locationRepository.findAll(specification, page);
+        Page<Location> locationsCriteria = locationRepository.findAll(specification, page);
+        List<Location> locationBasedOnRole = userService.getUserLocations();
+        List<Location> locationBasedOnCriteria = locationsCriteria.getContent();
+        List<Location> filteredList = new ArrayList<>();
+        if(SecurityUtils.isCurrentUserInRole(ADMIN)){
+            filteredList = locationBasedOnCriteria;
+        }
+        else if (SecurityUtils.isCurrentUserInRole(USER) && locationBasedOnRole != null && locationBasedOnCriteria != null){
+            for (Location location : locationBasedOnRole) {
+                if(location != null && locationBasedOnCriteria.contains(location)){
+                    filteredList.add(location);
+                }
+            }
+        }
+        return new PageImpl<Location>(filteredList);
     }
 
     /**

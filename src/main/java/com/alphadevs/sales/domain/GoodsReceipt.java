@@ -38,7 +38,7 @@ public class GoodsReceipt implements Serializable {
     @Column(name = "po_number")
     private String poNumber;
 
-    @OneToMany(mappedBy = "grn")
+    @OneToMany(mappedBy = "grn",fetch = FetchType.EAGER)
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<GoodsReceiptDetails> details = new HashSet<>();
 
