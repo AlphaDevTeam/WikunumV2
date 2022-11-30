@@ -3,6 +3,7 @@ package com.alphadevs.sales.service.dto;
 import com.alphadevs.sales.config.Constants;
 
 import com.alphadevs.sales.domain.Authority;
+import com.alphadevs.sales.domain.Company;
 import com.alphadevs.sales.domain.User;
 
 import javax.validation.constraints.Email;
@@ -52,6 +53,8 @@ public class UserDTO {
     private Instant lastModifiedDate;
 
     private Set<String> authorities;
+
+    private Company company;
 
     public UserDTO() {
         // Empty constructor needed for Jackson.
@@ -178,6 +181,10 @@ public class UserDTO {
     public void setAuthorities(Set<String> authorities) {
         this.authorities = authorities;
     }
+
+    public Company getCompany() { return company; }
+
+    public void setCompany(Company company) { this.company = company; }
 
     @Override
     public String toString() {

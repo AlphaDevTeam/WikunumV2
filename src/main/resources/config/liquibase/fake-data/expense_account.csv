@@ -1,0 +1,11 @@
+id;transaction_date;transaction_description;transaction_amount_dr;transaction_amount_cr;transaction_balance;location_id;transaction_type_id;expense_id
+1;2019-12-08;Investment Account generate;81298;74687;71812;1;1;1
+2;2019-12-08;Andorra overriding synergies;89671;64747;7128;2;2;2
+3;2019-12-07;Profound Markets Intelligent Frozen Shoes;35162;19455;10142;3;3;3
+4;2019-12-08;Money Market Account Fiji;67009;30728;92960;4;4;4
+5;2019-12-07;Moldova archive;61033;71763;71615;5;5;5
+6;2019-12-08;Administrator;82317;12188;52248;6;6;6
+7;2019-12-08;Dong;18143;79978;52516;7;7;7
+8;2019-12-08;attitude-oriented multi-byte white;91775;96292;42452;8;8;8
+9;2019-12-08;neural;55022;37350;4341;9;9;9
+10;2019-12-08;Frozen Kids;63798;81918;51517;10;10;10

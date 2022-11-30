@@ -1,0 +1,11 @@
+id;transaction_date;transaction_description;transaction_amount_dr;transaction_amount_cr;transaction_balance;location_id;transaction_type_id;customer_id
+1;2019-12-08;Customer Montserrat;81729;78383;45231;1;1;1
+2;2019-12-08;Sleek Wooden Fish markets;72482;6035;59327;2;2;2
+3;2019-12-08;Shoes HDD;21921;32901;97586;3;3;3
+4;2019-12-08;override PNG;43365;65870;4366;4;4;4
+5;2019-12-08;Angola;71920;65326;22845;5;5;5
+6;2019-12-08;Virgin Islands, British Borders Intelligent;40326;68022;22056;6;6;6
+7;2019-12-08;Electronics Switchable;46262;17419;86827;7;7;7
+8;2019-12-07;mindshare navigating Money Market Account;73535;37103;76772;8;8;8
+9;2019-12-07;Awesome Fresh Hat New Jersey;43861;2939;72525;9;9;9
+10;2019-12-08;Auto Loan Account Personal Loan Account;79295;42172;65500;10;10;10

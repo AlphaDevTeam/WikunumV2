@@ -1,0 +1,11 @@
+id;transaction_date;transaction_description;transaction_amount_dr;transaction_amount_cr;transaction_balance;location_id;transaction_type_id
+1;2019-12-08;redundant website;45522;14958;1162;1;1
+2;2019-12-08;Jordanian Dinar;39554;47993;97469;2;2
+3;2019-12-08;multi-state El Salvador Colon US Dollar XSS;77985;90781;3961;3;3
+4;2019-12-08;bypass Concrete;10279;98666;57090;4;4
+5;2019-12-08;Berkshire;61815;21034;70246;5;5
+6;2019-12-08;back up Tactics;7241;51771;53424;6;6
+7;2019-12-08;revolutionary Sports Fantastic;39692;32209;13271;7;7
+8;2019-12-07;magenta Turkish Lira;82144;20015;4118;8;8
+9;2019-12-08;Tasty deposit circuit;3158;59477;93621;9;9
+10;2019-12-08;Home Loan Account;29883;70906;93520;10;10

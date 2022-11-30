@@ -1,0 +1,62 @@
+{
+    "name": "Invoice",
+    "fields": [
+        {
+            "fieldName": "invNumber",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "invDate",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "invoiceDetails",
+            "otherEntityRelationshipName": "inv",
+            "relationshipValidateRules": "required",
+            "relationshipName": "details"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "items",
+            "otherEntityRelationshipName": "invoice",
+            "relationshipValidateRules": "required",
+            "relationshipName": "item",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "location",
+            "otherEntityRelationshipName": "invoice",
+            "relationshipValidateRules": "required",
+            "relationshipName": "location",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "documentHistory",
+            "otherEntityRelationshipName": "invoice",
+            "relationshipName": "history",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191208181136",
+    "javadoc": "Invoice Entity.\\n@author Mihindu Karunarathne.",
+    "entityTableName": "invoice",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

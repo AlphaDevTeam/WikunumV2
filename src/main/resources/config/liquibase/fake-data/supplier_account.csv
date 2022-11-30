@@ -1,0 +1,11 @@
+id;transaction_date;transaction_description;transaction_amount_dr;transaction_amount_cr;transaction_balance;location_id;transaction_type_id;supplier_id
+1;2019-12-08;program Soft interface;90903;60185;17968;1;1;1
+2;2019-12-08;redefine;51261;18097;41303;2;2;2
+3;2019-12-07;Berkshire;24723;9739;87074;3;3;3
+4;2019-12-08;Home Loan Account Louisiana;66262;59295;9526;4;4;4
+5;2019-12-08;envisioneer Coordinator;25813;85798;65673;5;5;5
+6;2019-12-08;Rhode Island;59871;13087;39665;6;6;6
+7;2019-12-07;Ford;23605;88370;7349;7;7;7
+8;2019-12-08;interface;44877;33700;66939;8;8;8
+9;2019-12-07;content;24871;58788;61714;9;9;9
+10;2019-12-07;De-engineered strategic integrate;60553;73640;35673;10;10;10

@@ -1,6 +1,8 @@
 package com.alphadevs.sales.web.rest;
 
 
+import com.alphadevs.sales.domain.Company;
+import com.alphadevs.sales.domain.ExUser;
 import com.alphadevs.sales.domain.User;
 import com.alphadevs.sales.repository.UserRepository;
 import com.alphadevs.sales.security.SecurityUtils;
@@ -21,6 +23,8 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.util.*;
+
+import static com.alphadevs.sales.security.AuthoritiesConstants.ADMIN;
 
 /**
  * REST controller for managing the current user's account.
@@ -102,10 +106,35 @@ public class AccountResource {
      */
     @GetMapping("/account")
     public UserDTO getAccount() {
-        return userService.getUserWithAuthorities()
-            .map(UserDTO::new)
-            .orElseThrow(() -> new AccountResourceException("User could not be found"));
+        UserDTO userDTO = userService.getUserWithAuthorities().map(UserDTO::new).orElseThrow(() -> new AccountResourceException("User could not be found"));
+        if(userService.getExUser().isPresent() && userService.getExUser().get() != null && userService.getExUser().get().getCompany() != null ) {
+            userDTO.setCompany(userService.getExUser().get().getCompany());
+        }else if(userDTO.getAuthorities().contains(ADMIN)){
+            Company company = new Company();
+            company.setCompanyCode("System");
+            userDTO.setCompany(company);
+        }else{
+            userDTO = new UserDTO();
+            new AccountResourceException("Only Admin users can act as System Users");
+        }
+        return userDTO;
     }
+
+    /**
+     * {@code GET  /account/exuser} : get the current exuser.
+     *
+     * @return the current exuser.
+     * @throws RuntimeException {@code 500 (Internal Server Error)} if the user couldn't be returned.
+     */
+    @GetMapping("/account/exuser")
+    public ExUser getCurrentExUser() {
+        if (userService.getExUser().isPresent()) {
+            return userService.getExUser().get();
+        }else{
+            throw new AccountResourceException("ExUser could not be found");
+        }
+    }
+
 
     /**
      * {@code POST  /account} : update the current user information.
